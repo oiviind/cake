@@ -1,0 +1,51 @@
+/* Add some basic styling for the cakes */
+.cake-card {
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #F7F5EB;
+    color: #333;
+    width: fit-content;
+    text-align: center;  
+    float: left;
+    margin-right: 10px;
+    width: 30%; 
+  }
+  
+  /* Add some styling for the images */
+  img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .cake img:hover {
+    cursor: zoom-in;
+    transform: scale(1.2);
+  }
+  
+  h2 {
+    color: #333;
+  }
+
+  .view-details-btn{
+    background-color: black;
+color: #F7F5EB;  }
+
+  body {
+    text-align: center;
+  }
+
+  
+  /* Media query for devices with a screen width less than 900px */
+@media (max-width: 900px) {
+    .cake {
+      width: 100%;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+  }

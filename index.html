@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kjerstis bakeverden</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <h1>Kjerstis bakeverden</h1>
+
+  <div id="cake-list">  </div>
+
+  
+
+
+  <script>
+    // Array of cakes
+    var cakes = [
+      {name: "Sjokoladekake", price: "NOK 250,-", category: "Sjokolade", image: "https://instagram.fosl4-2.fna.fbcdn.net/v/t39.30808-6/313885038_5958069317551213_7061162975589874871_n.jpg?stp=c0.70.1392.1740a_dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=instagram.fosl4-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=ihCw01P69I4AX9MmNLp&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=Mjk2NDk2ODkxNjM3NTM3MjIyNg%3D%3D.2-ccb7-5&oh=00_AfDQYiKbfgvD6eJiUJxWBWZIiIEv67kv_0Vn-bhGxOf4gQ&oe=63C8DF6E&_nc_sid=6136e7"},
+      {name: "Kransekake", price: "NOK 300,-", category: "Mandel", image: "https://instagram.fosl4-2.fna.fbcdn.net/v/t39.30808-6/313885038_5958069317551213_7061162975589874871_n.jpg?stp=c0.70.1392.1740a_dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=instagram.fosl4-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=ihCw01P69I4AX9MmNLp&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=Mjk2NDk2ODkxNjM3NTM3MjIyNg%3D%3D.2-ccb7-5&oh=00_AfDQYiKbfgvD6eJiUJxWBWZIiIEv67kv_0Vn-bhGxOf4gQ&oe=63C8DF6E&_nc_sid=6136e7"},
+      {name: "Marsipankake", price: "NOK 450,-", category: "Mandel", image: "https://instagram.fosl4-2.fna.fbcdn.net/v/t39.30808-6/313885038_5958069317551213_7061162975589874871_n.jpg?stp=c0.70.1392.1740a_dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=instagram.fosl4-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=ihCw01P69I4AX9MmNLp&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=Mjk2NDk2ODkxNjM3NTM3MjIyNg%3D%3D.2-ccb7-5&oh=00_AfDQYiKbfgvD6eJiUJxWBWZIiIEv67kv_0Vn-bhGxOf4gQ&oe=63C8DF6E&_nc_sid=6136e7"}
+    ];
+
+    function displayCakes() {
+      var cakeList = document.getElementById("cake-list");
+      for (var i = 0; i < cakes.length; i++) {
+        var cakeCard = document.createElement("div");
+        cakeCard.classList.add("cake-card"); // Add a class for styling
+
+        var cakeImage = document.createElement("img");
+        cakeImage.src = cakes[i].image;
+        cakeCard.appendChild(cakeImage);
+
+        var cakeInfo = document.createElement("div");
+        cakeInfo.classList.add("cake-info"); // Add a class for styling
+        cakeInfo.innerHTML = "<h2>" + cakes[i].name + "</h2>" +
+                             "<p>Price: " + cakes[i].price + "</p>" +
+                             "<p>Category: " + cakes[i].category + "</p>";
+        cakeCard.appendChild(cakeInfo);
+
+        var viewDetailsBtn = document.createElement("button");
+        viewDetailsBtn.classList.add("view-details-btn"); // Add a class for styling
+        viewDetailsBtn.innerHTML = "View Details";
+        viewDetailsBtn.addEventListener("click", function(){
+          // Code to open the popup window with more information
+        });
+        cakeInfo.appendChild(viewDetailsBtn);
+
+        cakeList.appendChild(cakeCard);
+      }
+    }
+
+
+    // Call the displayCakes function
+    displayCakes();
+    
+  </script>
+</body>
+</html>
